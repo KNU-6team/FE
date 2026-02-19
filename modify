@@ -8,11 +8,6 @@ height_percentile
 
 ...전체적인 백분위, 순위들 수정
 
-<summary.html>
-- weight_info.percentile
-
-<그래프, 이미지>
-
 /// 주의사항
 DB의 percentile에 들어간 테스트 데이터는 
 실제 성장도표(공식 통계) 기반으로 계산한 값은 아니고
@@ -23,3 +18,6 @@ DB의 percentile에 들어간 테스트 데이터는
 - WHO Growth Chart
 - CDC Growth Chart
 연령 + 성별 기준으로
+
+/// x-ray 사진은 일단 모든 환자가 동일하게 나옴
+--> 수정 필요
