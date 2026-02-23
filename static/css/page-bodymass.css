@@ -1,0 +1,196 @@
+/* =========================
+   요약 설명 박스
+========================= */
+
+.bodymass-summary {
+    width: 100%;
+    max-width: 700px;
+    /* background: #f1f3f5; */
+    background: #cfe0f4;
+    border-radius: 15px;
+    padding: 20px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+.bodymass-summary p {
+    margin-top: 0;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+/* =========================
+   BMI 그래프 영역
+========================= */
+
+.bodymass-chart {
+    width: 100%;
+    max-width: 700px;
+}
+
+.chart-title {
+    display: inline-block;
+    background: #cfe8e6;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.chart-placeholder {
+    width: 100%;
+    height: 500px;
+    /* background: #e5e7eb; */
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* color: #6b7280; */
+    font-size: 18px;
+}
+
+/* =========================
+   BMI 구간 전체
+========================= */
+
+.bmi-range {
+    width: 100%;
+    max-width: 700px;
+    position: relative;
+    margin: 20px 0 10px;
+}
+
+/* =========================
+   화살표
+========================= */
+
+.bmi-indicator {
+    position: absolute;
+    top: -14px;
+    transform: translateX(-50%);
+    transition: left 0.3s ease;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 10px solid #e11d48;
+}
+
+
+/* =========================
+   바 영역
+========================= */
+
+.bmi-bar {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    border-radius: 12px;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* =========================
+   공통 구간
+========================= */
+
+.bmi-segment {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2;
+}
+
+.bmi-segment span {
+    font-size: 12px;
+    opacity: 0.85;
+}
+
+/* =========================
+   BMI 전체 영역
+========================= */
+
+.bmi-range {
+    width: 100%;
+    max-width: 700px;
+    position: relative;
+    margin: 24px 0;
+}
+
+/* =========================
+   BMI 바
+========================= */
+
+.bmi-bar {
+    display: flex;
+    height: 72px;
+    border-radius: 12px;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* =========================
+   공통 구간
+========================= */
+
+.bmi-segment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2;
+}
+
+.bmi-segment span {
+    font-size: 12px;
+    margin-top: 4px;
+    opacity: 0.85;
+}
+
+/* =========================
+   구간별 비율 ⭐ 핵심
+========================= */
+
+.underweight { flex: 35; background: #d1d1d1; }
+.normal      { flex: 25; background: #cce7ff; }
+.overweight  { flex: 10; background: #d9e78c; }
+.obese       { flex: 20; background: #7fb069; color: #fff; }
+.severe      { flex: 10; background: #3f4f3c; color: #fff; }
+
+/* =========================
+   하단 캐릭터 + 말풍선
+========================= */
+
+.bmi-comment-box {
+    width: 100%;
+    max-width: 700px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.character {
+    font-size: 52px;
+}
+
+/* .comment {
+    background: #e5e5e5;
+    border-radius: 999px;
+    padding: 18px 30px;
+    width: 60%;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: center;
+} */

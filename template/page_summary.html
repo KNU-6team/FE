@@ -1,0 +1,136 @@
+
+<section class="page page-summary" id="summary">
+  <div class="patient-info">
+    <div class="summary-patient">
+      <div>환자코드</div>
+      <div>이름</div>
+      <div>성별</div>
+      <div>생년월일</div>
+      <div>검사일자</div>
+    </div>
+    <div class="summary-patient-info">
+      <strong data-field="patient.patient_code">2096361</strong>
+      <strong data-field="patient.name">허지효</strong>
+      <strong data-field="patient.gender">남자</strong>
+      <strong data-field="patient.birth_date">2011-06-07</strong>
+      <strong data-field="report.exam_date">2023-03-24</strong>
+    </div>
+  </div>
+
+  <!-- 예측 카드 2개 -->
+  <div class="summary-cards">
+
+    <!-- 골연령 -->
+    <div class="summary-card">
+      <div class="summary-card-title">인공지능 기반 골연령 측정결과
+        <div class="page-hint" data-target="page-expected-height">P.6</div>
+      </div>
+
+      <div class="summary-card-body">
+        <ul>
+          <li><span>역연령</span><strong data-field="bone_age.chronological_age">11세 9개월</strong></li>
+          <li><span>골연령</span><strong data-field="bone_age.bone_age">13세 5개월</strong></li>
+          <li><span>현재 키</span><strong data-field="bone_age.current_height">107.8cm</strong></li>
+          <li><span>연령 차이</span><strong data-field="bone_age.age_difference">1세 8개월</strong></li>
+        </ul>
+
+        <div class="summary-result">
+          <span data-field-prefix="patient.name">허지효님의 골연령 예측키</span>
+          <strong data-field="bone_age.predicted_height_ai">123.2cm</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- 유전 -->
+    <div class="summary-card">
+      <div class="summary-card-title">유전적 예측 키
+        <div class="page-hint" data-target="page-expected-height">P.6</div>
+      </div>
+
+      <div class="summary-card-body">
+        <ul>
+          <li><span>아버지 키</span><strong data-field="genetic_info.father_height">170.0cm</strong></li>
+          <li><span>어머니 키</span><strong data-field="genetic_info.mother_height">160.0cm</strong></li>
+        </ul>
+
+        <div class="summary-result">
+          <span data-field-prefix="patient.name">허지효님의 유전적 예측키</span>
+          <strong data-field="genetic_info.predicted_height_genetic">171.5cm</strong>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 현재 키 백분위 -->
+  <div class="summary-wide">
+    <div class="summary-wide-title">현재 키 백분위
+      <div class="page-hint" data-target="page-height">P.3</div>
+    </div>
+
+    <div class="summary-wide-body">
+      <p>
+        <span data-field-prefix="patient.name">000</span>님의 현재 키는 동일 연령<br />
+        100명 중 작은 순서로
+        <strong data-field="height_percentile.percentile" class="rank">1번째</strong> 입니다.
+      </p>
+
+      <div class="rank-bars rank-1">
+        <div class="bars">
+          <span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="summary-wide">
+    <div class="summary-wide-title">체중 백분위 및 체질량 지수 결과
+      <div class="page-hint" data-target="page-weight">P.4,5</div>
+    </div>
+
+    <div class="summary-wide-body split">
+      <div class="weight-info">
+        <span class="sub-label"><span data-field-prefix="patient.name">000</span>님의 체중 백분위</span>
+        <div class="large-text">동일연령 중 가벼운 순서로 
+            <strong class="rank" data-field="weight_info.percentile">1번째</strong>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="bmi-info">
+        <span class="sub-label">체질량 지수(BMI)</span>
+        <div class="bmi-result">
+            <strong class="value" data-field="weight_info.bmi">17.21<small>kg/m²</small></strong>
+            <span class="badge warning" data-field="weight_info.bmi_category">저체중</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="summary-wide final-judgment">
+      <div class="summary-wide-title">종합 판정</div>
+      <div class="judgment-content">
+          <p class="summary-text">
+              <span data-field-prefix="patient.name">000</span>님의 실제 나이는 <strong data-field="bone_age.chronological_age">11세 9개월</strong>이며, 골연령은 
+              <strong class="border-bottom" data-field="bone_age.bone_age">13세 5개월</strong>입니다.
+              골연령 기반 예측 키는 <strong class="text-xl" data-field="bone_age.predicted_height_ai">123.2cm</strong>이며, 
+              유전적 예측 키는 <strong class="text-xl" data-field="genetic_info.predicted_height_genetic">171.5cm</strong>입니다.
+          </p>
+          <div class="judgment-notes">
+              <ul>
+                  <li>예측 신장은 뼈 나이 7세 이상의 경우 뼈 나이에 의한 성장 예상키가 제공됩니다.</li>
+                  <li>예측 신장은 체질량 지수, 비만도, 식습관, 운동습관, 건강상태 등에 영향을 받아 변할 수 있습니다.</li>
+              </ul>
+          </div>
+          <div class="judgment-footer">
+              참고를 위한 <span data-field-prefix="patient.name">허지효님의</span> 체중 백분위는 <strong class="highlight-amber" data-field="weight_info.percentile">1순위</strong>이며 
+              체질량지수는 <strong data-field="weight_info.bmi">17.21kg/m²</strong>로 
+              <strong class="highlight-amber" data-field="weight_info.bmi_category">저체중</strong>에 해당합니다.
+          </div>
+      </div>
+  </div>
+
+</section>
+  

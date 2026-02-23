@@ -1,0 +1,99 @@
+<section class="page page-expected-height" id="page-expected-height">
+
+  <!-- 제목 -->
+  <div class="page-title">
+    <span class="icon">💡</span>
+    <span class="title-text">아이 예상키</span>
+  </div>
+
+  <div class="parent-height">
+      <!-- 설명 -->
+    <p class="page-desc">
+      <strong>부모님의 키</strong>를 이용하여 아이의 성장 예상 키를 계산하는 방법도 있습니다.<br>
+      아래의 식에 따라 계산합니다.
+    </p>
+
+    <!-- Target height 박스 -->
+    <div class="target-box">
+      <h3>Target height</h3>
+
+      <p class="target-desc">
+        이상적인 환경에 자란 아이가 도달할 수 있는 예측 신장으로,
+        유전적인 요인을 고려합니다.
+      </p>
+
+      <div class="formula">
+        <p><strong>아들</strong> : (아빠 키 + 엄마 키 + 13cm) / 2 <span>[오차범위 ±10cm]</span></p>
+        <p><strong>딸</strong> : (아빠 키 + 엄마 키 - 13cm) / 2 <span>[오차범위 ±8.5cm]</span></p>
+      </div>
+
+      <!-- 결과 카드 -->
+      <div class="result-card">
+        <div class="child-icon">👦</div>
+
+          <div class="result-item">
+            <div class="label">예상 키</div>
+            <div class="value" data-field="genetic_info.predicted_height_genetic">163.50cm</div>
+          </div>
+
+          <div class="result-item">
+            <div class="label">엄마 키</div>
+            <div class="value" data-field="genetic_info.mother_height">165cm</div>
+          </div>
+
+          <div class="result-item">
+            <div class="label">아빠 키</div>
+            <div class="value" data-field="genetic_info.father_height">175cm</div>
+          </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="rus-height">
+      <!-- 설명 -->
+    <p class="page-desc">
+      측정한 골연령과 역연령, 현재 키를 이용하여 성인이 되었을 때의 최종 예측 키를 계산할 수 있습니다.<br>
+      아래는 <strong>골연령을 기반</strong>으로 한 예측 키입니다
+    </p>
+
+    <!-- Expected Height 설명 박스 -->
+    <div class="expected-box">
+      <h3>Expected Height</h3>
+
+      <p class="small-desc">
+        현재 아이의 성장 정보(나이, 키, RUS 점수)를 기반으로 계산된 예측 키입니다.<br>
+        * Assessment of Skeletal Maturity and Prediction of Adult Height (TW3 Method)
+      </p>
+
+      <div class="formula-detail">
+        <h4>적용된 계산식</h4>
+        <div>
+          <p>현재신장 + a × RUS점수 + b</p>
+          <p>a = −(0.0436 − 0.00379 × (age − 11))</p>
+          <p>b = 44.02 − 3.784 × (age − 11) − 0.0247 × (age − 11)² − 0.0365 × (age − 11)³</p>
+        </div>
+      </div>
+
+      <div class="expected-result">
+        <p><strong>Expected Height :</strong> <span data-field="bone_age.predicted_height_ai" id="predictedHeightAI">169.41cm</span></p>
+        <p class="range"><strong>오차 범위 </strong>: <span id="heightRange"></span> (<span id="heightCenter"></span>)</p>
+      </div>
+    </div>
+
+  </div>
+  
+  <!-- 하단 말풍선 -->
+  <div class="comment-box">
+    <div class="character">🙂</div>
+      <div class="comment">
+      <span data-field-prefix="patient.name">허지호님의</span> 유전적 예측키는 <strong data-field="genetic_info.predicted_height_genetic">163.50cm</strong>,<br>
+      골연령 기반 예측키는<strong data-field="bone_age.predicted_height_ai">169.41cm</strong> 입니다.
+    </div>
+  </div>
+
+  <p class="page-note">
+    유전적 예상키는 부모님의 키로만 계산되므로 현재 키보다 작거나 클 수 있으며,<br>
+    식생활 습관 및 운동량, 수면, 생활 방식에 따라 차이를 보일 수 있습니다.
+  </p>
+
+</section>

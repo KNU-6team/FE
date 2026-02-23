@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성장 검사 리포트 조회</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/start.css">
+</head>
+<body>
+
+<div class="login-wrapper">
+    <div class="login-container">
+        <!-- 상단 로고 및 타이틀 -->
+        <div class="login-header">
+            <div class="logo-icon">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+            </div>
+            <h2>성장 검사 리포트 조회</h2>
+            <p>보호자 확인을 위해 정보를 입력해 주세요.</p>
+        </div>
+
+        <!-- 입력 폼 -->
+        <div class="login-card">
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="patientCode">환자코드</label>
+                    <input type="text" id="patientCode" placeholder="환자코드를 입력하세요" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="birthDate">생년월일 (8자리)</label>
+                    <input type="text" id="birthDate" placeholder="예: 20110607" maxlength="8" required>
+                    <span class="input-hint">숫자만 8자리 입력해 주세요.</span>
+                </div>
+
+                <button type="submit" class="btn-submit">리포트 확인하기</button>
+            </form>
+        </div>
+
+        <div class="login-footer">
+            <p>정보 분실 시 해당 병원으로 문의해 주시기 바랍니다.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('birthDate').addEventListener('input', function(e) {
+        // 숫자만 입력 가능하도록 처리
+        this.value = this.value.replace(/[^0-9]/g, '');
+    });
+
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const patientCode = document.getElementById('patientCode').value;
+        const birthDate = document.getElementById('birthDate').value;
+
+        if (patientCode.trim() === '') {
+            alert('환자코드를 입력해주세요.');
+            return;
+        }
+
+        if (birthDate.length !== 8) {
+            alert('생년월일 8자리를 정확히 입력해주세요.');
+            return;
+        }
+
+        // 성공 시 리포트 페이지로 이동 (patient_code와 birthDate 전달)
+        // report 페이지는 쿼리 파라미터로 값을 받아 서버에서 데이터를 주입합니다.
+        const params = new URLSearchParams({
+            patient_code: patientCode,
+            birth_date: birthDate
+        });
+        window.location.href = '/?' + params.toString();
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+/* =========================
+   아이 예상키 페이지
+========================= */
+
+.page-expected-height {
+    gap: 24px;
+}
+
+.page-desc {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+}
+.parent-height {
+    width: 100%;
+}
+
+/* Target height 박스 */
+.target-box {
+    width: 100%;
+    /* background: #f3f3f3; */
+    background: #e9f3ff;
+    border-radius: 36px;
+    padding: 32px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.target-box h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    margin-top: 0;
+}
+
+.target-desc {
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.formula p {
+    font-size: 14px;
+    margin: 4px 0;
+}
+
+.formula span {
+    color: #555;
+    font-size: 13px;
+}
+
+/* 결과 카드 */
+.result-card {
+    margin-top: 24px;
+    background: #fff;
+    border-radius: 999px;
+    padding: 20px 28px;
+    box-shadow: inset 0 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 24px;
+}
+
+.child-icon {
+    font-size: 48px;
+}
+
+.result-item {
+    text-align: center;
+}
+
+.result-item .label {
+    font-size: 14px;
+    color: #333;
+}
+
+.result-item .value {
+    margin-top: 6px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.rus-height{
+    width: 100%;
+}
+/* Expected Height 박스 */
+.expected-box {
+    width: 100%;
+    /* background: #f3f3f3; */
+    background: #e9f3ff;
+    border-radius: 36px;
+    padding: 28px;
+    font-size: 14px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.expected-box h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    margin-top: 0;
+    
+}
+
+.small-desc {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.formula-detail {
+    margin-top: 16px;
+    font-size: 13px;
+    margin-left: 20px;
+}
+
+.formula-detail div{
+    margin-left: 20px;
+}
+
+.expected-result {
+    margin-top: 16px;
+}
+
+.expected-result .range span {
+    color: #d32f2f;
+    font-weight: 600;
+}
+
+/* comment 전체 영역 */
+.comment-box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: -20px;
+}
+
+/* 캐릭터 */
+.comment-box .character {
+    font-size: 48px;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+/* 하단 설명 (말풍선 아래 딱 붙게) */
+.page-note {
+    margin-top: 0;           /* 말풍선과 간격 최소 */
+    margin-left: 60px;         /* character + gap 만큼 */
+    font-size: 12px;
+    line-height: 1.5;
+    color: #555;
+    text-align: left;
+}
+
+

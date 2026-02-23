@@ -1,0 +1,44 @@
+<section class="page page-weight" id="page-weight">
+
+    <!-- 제목 -->
+    <div class="page-title">
+      <span class="icon">💡</span>
+      <span class="title-text">성장 정보(체중)</span>
+    </div>
+  
+    <!-- 그래프 영역: Chart.js 성장곡선 차트 -->
+    <div class="weight-chart">
+      <div class="chart-title">여자 3–18세 체중 백분위수</div>
+      <div class="chart-placeholder" style="position:relative; width:100%; max-width:900px; height:500px; margin:0 auto;">
+        <canvas id="weightChart" style="display: block; width: 100%; height: 100%;"></canvas>
+      </div>
+    </div>
+  
+    <!-- 정보 카드 -->
+    <div class="info-card">
+      <div class="info-item">
+        <div class="info-icon">⚖️</div>
+        <div class="info-text">
+          <div class="info-label"><span data-field-prefix="patient.name">허지호님의</span><br>현재체중</div>
+          <div class="info-value highlight" data-field="weight_info.weight">20.0kg</div>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">👥</div>
+        <div class="info-text">
+          <div class="info-label">동일 연령 100명 중<br>가벼운 순서로</div>
+          <div class="info-value highlight" data-field="weight_info.percentile">1번째</div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- 설명 말풍선 -->
+    <div class="weight-comment-box">
+      <div class="character">🙂</div>
+      <div class="comment">
+        <span data-field-prefix="patient.name">허지호님의</span> 체중 백분위는 <strong data-field="weight_info.percentile">1순위</strong>로<br>
+        <strong data-field="weight_info.bmi_category">저체중</strong>에 속합니다.
+      </div>
+    </div>
+  
+  </section>

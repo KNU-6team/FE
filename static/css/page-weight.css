@@ -1,0 +1,93 @@
+/* =========================
+   그래프 영역 (중앙)
+========================= */
+.weight-chart {
+    width: 100%;
+    max-width: 700px;
+    height: 700px;
+
+    /* background: #d9d9d9; */
+    border-radius: 32px;
+
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.chart-title {
+    display: inline-block;
+    background: #cfe8e6;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.chart-placeholder {
+    font-size: 16px;
+    color: #444;
+}
+
+/* =========================
+   정보 카드 (중앙 정렬)
+========================= */
+.info-card {
+    width: 100%;
+    max-width: 700px;
+
+    display: flex;
+    border: 1.5px solid #000;
+    border-radius: 28px;
+    overflow: hidden;
+    margin-top: auto;
+    margin-bottom: 30px;
+    
+}
+
+.info-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;   /* ⭐ 내부 중앙 */
+    gap: 16px;
+    padding: 28px;
+    border-right: 1px solid black;
+}
+
+.info-icon {
+    font-size: 40px;
+}
+
+.info-text {
+    text-align: center;
+}
+
+.info-label {
+    font-size: 14px;
+    color: #333;
+}
+
+.info-value {
+    margin-top: 6px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.highlight {
+    color: #2563eb;
+}
+
+/* =========================
+   하단 캐릭터 + 말풍선
+========================= */
+.weight-comment-box {
+    width: 100%;
+    max-width: 700px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;   /* ⭐ 중앙 */
+    gap: 16px;
+    margin-top: auto;
+}
+

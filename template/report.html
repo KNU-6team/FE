@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>골연령 검사 리포트</title>
+    <link rel="stylesheet" href="../static/css/report.css">
+    <link rel="stylesheet" href="../static/css/page-summary.css">
+    <link rel="stylesheet" href="../static/css/page-cover.css">
+    <link rel="stylesheet" href="../static/css/page-height.css">
+    <link rel="stylesheet" href="../static/css/page-weight.css">
+    <link rel="stylesheet" href="../static/css/page-bodymass.css">
+    <link rel="stylesheet" href="../static/css/page-expected-height.css">
+    <link rel="stylesheet" href="../static/css/page-xray.css">
+    <!-- 서버에서 전달된 report 데이터를 전역 JS 변수로 노출 -->
+    <script>
+        window.REPORT_DATA = {{ report|tojson|safe }};
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="../static/js/report.js" defer></script>
+    <script src="../static/js/bodymass.js" defer></script>
+</head>
+<body>
+    <div class="toolbar">
+        <div class="toolbar-content">
+            <h1>골연령 검사 리포트</h1>
+            <div class="toolbar-right">
+                <span class="page-info">
+                    페이지 <span id="currentPage">1</span> /
+                    <span id="totalPage">0</span>
+                </span>
+                <button class="print-btn" id="printButton">출력</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- pages -->
+    <main class="container">
+        <div id="page-cover"></div>
+        <div id="page-summary"></div>
+        <div id="page-height"></div>
+        <div id="page-weight"></div>
+        <div id="page-bodymass"></div>
+        <div id="page-expected-height"></div>
+        <div id="page-xray"></div>
+    </main>
+
+    <!-- 고정 버튼: 요약페이지로 돌아가기 -->
+    <button id="backToSummaryBtn" class="back-to-summary-btn" title="요약페이지로 돌아가기">
+        <span>요약 페이지<br>돌아가기</span>
+    </button>
+</body>
+

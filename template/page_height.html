@@ -1,0 +1,38 @@
+<section class="page page-height" id="page-height">
+
+    <div class="page-title">
+      <span class="icon">💡</span>
+      <span class="title-text">성장 정보(키)</span>
+    </div>
+  
+    <!-- 설명 박스 -->
+    <div class="height-summary">
+      <p>
+        현재 <strong data-field="patient.gender">여자</strong>, 키 <strong data-field="bone_age.current_height">150cm</strong>는<br />
+        같은 성별 및 연령에서 <strong data-field="height_percentile.percentile">상위 75%</strong>입니다.<br /></p>
+        <p class="height-summary-result"> <span data-field="height_percentile.percentile_rank">3</span>에 해당하여 <strong data-field="height_percentile.assessment">저신장</strong>이라고 판단됩니다.</p>
+      
+    </div>
+  
+    <!-- 그래프 영역: Chart.js 성장곡선 차트 -->
+    <div class="height-chart">
+  
+      <div class="chart-title">여자 3–18세 신장 백분위수</div>
+  
+      <div class="chart-placeholder">
+        <canvas id="heightChart" style="display: block; width: 100%; height: 100%;"></canvas>
+      </div>
+  
+    </div>
+
+    <!-- 설명 말풍선 -->
+    <div class="height-comment-box">
+      <div class="character">🙂</div>
+      <div class="comment">
+        <span data-field-prefix="patient.name">허지호님의</span> 신장 백분위는 <strong data-field="height_percentile.percentile">1순위</strong>로<br>
+        100명 중 작은 순서로 <strong data-field="height_percentile.percentile">1번째</strong> 입니다.
+      </div>
+    </div>
+  
+  </section>
+  

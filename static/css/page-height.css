@@ -1,0 +1,73 @@
+/* 성장 정보 페이지 */
+
+/* =========================
+제목 (왼쪽 정렬 유지)
+========================= */
+
+.height-summary {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 700px;
+    /* background: #f1f3f5; */
+    background: #cfe0f4;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+
+}
+
+.height-summary p {
+    margin-top: 0;
+    font-size: 16px;
+}
+
+.height-summary-result {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    background: white;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 0;
+}
+
+.height-icon {
+    font-size: 28px;  
+}
+
+.height-chart {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 700px;
+}
+
+.chart-title {
+    display: inline-block;
+    background: #cfe8e6;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* 그래프 자리 표시 */
+.chart-placeholder {
+    position:relative; 
+    width:100%; 
+    max-width:900px; 
+    height:500px; 
+    margin:0 auto;
+}
+/* =========================
+하단 캐릭터 + 말풍선
+========================= */
+.height-comment-box {
+    width: 100%;
+    max-width: 700px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;   /* ⭐ 중앙 */
+    gap: 16px;
+    margin-top: auto;
+}

@@ -1,0 +1,72 @@
+/* =========================
+   X-ray 박스 영역 (중앙)
+========================= */
+
+.xray-box-wrap {
+    width: 100%;
+    max-width: 700px;     /* ⭐ graph-box, info-card와 동일 */
+    
+    display: flex;
+    justify-content: center;
+    gap: 32px;          
+}
+
+/* =========================
+    개별 X-ray 박스
+========================= */
+
+.xray-box {
+    height: 420px;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 32px;
+}
+
+.xray-box img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 32px;
+}
+
+
+
+
+/* =========================
+   X-ray 아이템 (이미지 + 설명)
+========================= */
+
+.xray-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: auto;   /* 이미지와 문구 간격 */
+}
+
+/* =========================
+   설명 문구
+========================= */
+
+.xray-caption {
+    font-size: 14px;
+    color: #444;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* =========================
+   참조 배지
+========================= */
+
+.xray-caption .badge {
+    background: #cfe1ff;
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 999px;
+}
