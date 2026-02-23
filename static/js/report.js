@@ -266,3 +266,15 @@ function initSummaryNavigation() {
 document.getElementById('printButton').addEventListener('click', function() {
     window.print();
 });
+
+const backBtn = document.getElementById('backToSummaryBtn');
+
+if (backBtn) {
+    backBtn.addEventListener('click', function () {
+
+        document.querySelector('.page-summary').scrollIntoView({
+            behavior: 'smooth'
+        });
+
+    });
+}
