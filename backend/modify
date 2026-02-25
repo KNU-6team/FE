@@ -1,13 +1,4 @@
 
-<db>
-weight_info
-- percentile
-
-height_percentile
-- percentile
-
-...전체적인 백분위, 순위들 수정
-
 /// 주의사항
 DB의 percentile에 들어간 테스트 데이터는 
 실제 성장도표(공식 통계) 기반으로 계산한 값은 아니고
